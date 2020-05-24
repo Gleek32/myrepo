@@ -5,7 +5,7 @@ const connectDB = async () => {
       useNewUrlParser: true,
       useCreateIndex: true,
       useFindAndModify: false,
-      useUnifiedTopology: true,
+      useUnifiedTopology: true
     });
  
     console.log(
@@ -13,9 +13,10 @@ const connectDB = async () => {
     );
   } catch (err) {
     console.error('Database connection error:', err.message);
-  }
+  };
 };
 module.exports = connectDB;
+
 /*const mongoose = require('mongoose');
 
 const connectDB = async () => {
