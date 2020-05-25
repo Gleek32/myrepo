@@ -25,4 +25,4 @@ router
 .put(protect, authorize('publisher', 'admin'), updateCourse)
 .delete(protect, authorize('publisher', 'admin'), deleteCourse);
 
-module.exports = router;
+module.exports = router; 

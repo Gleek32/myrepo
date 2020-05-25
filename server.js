@@ -8,14 +8,11 @@ const cookieParser = require('cookie-parser');
 const errorHandler = require('./middleware/error');
 const connectDB = require('./config/db');
 
-
 //used to create a custom logger
 //const logger = require('./middleware/logger')
 
 //load env var
 dotenv.config({path: './config/config.env'});
-
-
 // Connect to a database
 connectDB();
 
@@ -56,15 +53,10 @@ const PORT = process.env.PORT || 5000;
 
 const server = app.listen(PORT, 
   console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.bold));
-
   
 // Handle unhandled promise rejections
 process.on('unhandledRejection', (err, promise) => {
   console.log(`Error: ${err.message}`.red);
-
   // Close server & exit process
 server.close(() => process.exit(1));
-
-
 });
-

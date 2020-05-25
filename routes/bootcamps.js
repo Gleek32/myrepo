@@ -1,5 +1,4 @@
 const express = require('express');
-
 const {
   getBootcamps, 
   getBootcamp, 
@@ -37,4 +36,4 @@ router.route('/:id')
 .put(protect, authorize('publisher', 'admin'), updateBootcamp)
 .delete(protect, authorize('publisher', 'admin'), deleteBootcamp);
 
-module.exports = router;
+module.exports = router; 

@@ -36,7 +36,7 @@ const CourseSchema = new mongoose.Schema({
     ref: 'Bootcamp',
     required: true
   },
-  
+
 });
 
 
@@ -69,11 +69,11 @@ CourseSchema.statics.getAverageCost = async function(bootcampId) {
 CourseSchema.post('save', function() {
   this.constructor.getAverageCost(this.bootcamp);
   });
-  
+
   // Call getAverageCost after remove
   CourseSchema.pre('remove', function() {
     this.constructor.getAverageCost(this.bootcamp);
   });
 
 
-module.exports = mongoose.model('Course', CourseSchema);
+module.exports = mongoose.model('Course', CourseSchema); 
