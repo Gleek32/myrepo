@@ -1,0 +1,263 @@
+* {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --primary: #8a57e9;
+  --secondary: #4c75e6;
+
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  color: #555555;
+  background-image: linear-gradient(
+    to right bottom,
+    var(--primary),
+    var(--secondary)
+  );
+  
+  
+}
+
+.wrapper {
+width: 60%;
+position: absolute;
+top: 35%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+.wrapper .title {
+  
+font-weight: 700;
+font-size: 24px;
+color: #fff;
+
+}
+
+.select_wrap {
+  width: 80%;
+  margin: 15px auto;
+  position: relative;
+  user-select: none;
+  
+}
+
+.select_wrap .default_option {
+  background: #fff;
+  border-radius: 5px;
+  position: relative;
+  cursor: pointer;
+  
+}
+
+.dropdown-list_item {
+  padding: 1rem;
+  font-size: 1.9rem;
+  
+}
+
+.select_wrap .default_option li {
+  padding: 10px 50px;
+  margin-top: 20px;
+}
+
+.select_wrap .default_option:before {
+  content: "";
+  position: absolute;
+  top: 25px;
+  right: 18px;
+  width: 6px;
+  height: 6px;
+  
+  border: 5px solid;
+  border-color: transparent transparent #555555 #555555;
+transform: rotate(-45deg);
+
+}
+p {
+  font-size: 18px;
+  text-align: left;
+}
+.select_wrap .select_ul {
+  position: absolute;
+  top: 70px;
+  left: 0px;
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  display: none;
+}
+
+.select_wrap .select_ul li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.select_wrap .select_ul li:hover {
+  background: #aaa9af;
+}
+
+.select_wrap .select_ul li:first-child:hover {
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+}
+
+.select_wrap .select_ul le:last-child:hover {
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px ;
+}
+
+.select_wrap .option {
+ display: flex;
+ align-items: center; 
+ width: 100%;
+ 
+}
+
+.select_wrap .option .icon {
+background: url('food_items.png') no-repeat 0 0;
+width: 10px;
+height: 42px;
+margin-right: 0px;
+
+
+}
+
+.select_wrap .option.pizza .icon {
+background-position: 0 0;
+
+
+}
+.select_wrap .option.burger .icon {
+  background-position: 0 -35px;
+}
+.select_wrap .option.ice .icon {
+  background-position: 0 -72px;
+  height: 33px;
+}
+.select_wrap .option.fries .icon {
+  background-position: 0 -111px;
+  width: 25px;
+  
+}
+
+.select_wrap.active .select_ul{
+display: block;
+
+}
+
+.select_wrap.active .default_option:before {
+  top: 25px;
+transform: rotate(-225deg);
+}
+
+a {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+
+  .wrapper {
+  width: 100%;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  }
+  .select_wrap .default_option:before {
+    content: "";
+    position: absolute;
+    top: 35px;
+    right: 5px;
+    width: 6px;
+    height: 6px;
+    
+    border: 5px solid;
+    border-color: transparent transparent #555555 #555555;
+  transform: rotate(-45deg);
+  
+  }
+  
+  }
+  .select_wrap .select_ul {
+    position: absolute;
+    top: 70px;
+    left: 0px;
+    width: 100%;
+    background: #fff;
+    border-radius: 5px;
+    display: none;
+  }
+  .select_wrap .option {
+    display: flex;
+    align-items: center;  
+    width: 110%;
+    
+   }
+  
+
+  .select_wrap .default_option li {
+    padding:  3px 20px;
+    margin-top: 1px;
+  }
+  
+  /* .select_wrap {
+    width: 80%;
+    margin: 15px auto;
+    position: relative;
+    user-select: none;
+    
+  } */
+}
+
+/* @media screen and (max-width: 768px) {
+
+  .wrapper {
+  width: 100%;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  }
+  .select_wrap .select_ul {
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    width: 100%;
+    background: #fff;
+    border-radius: 5px;
+    display: none;
+  }
+  .select_wrap .option {
+    display: flex;
+    align-items: center;  
+    width: 100%;
+    
+   }
+  
+
+  .select_wrap .default_option li {
+    padding:  3px 20px;
+    margin-top: 1px;
+  }
+   */
+  /* .select_wrap {
+    width: 80%;
+    margin: 15px auto;
+    position: relative;
+    user-select: none;
+    
+  } */
+}
+
+/* desktop 1200px
+laptop 1024px
+tablet 768px
+phone 480px */
